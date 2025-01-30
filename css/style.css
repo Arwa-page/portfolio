@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background:#fffaf8;
+    font-family: "Kufam", serif;
+    font-size:16px;
+    color:#333;
+    line-height:1.7em;
+}
+
+h4{
+    font-size:20px;
+    line-height:1.5em;
+}
+
+a{
+    color:#6575A6;
+}
+
+a:hover,a:focus,a:active,input,textarea,button{
+    text-decoration:none;
+    outline:none;
+    -webkit-transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    -o-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+    color:#525d7f;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+.full-width{width:100%;}
+
+.padding-none{padding:0px;}
+
+.pt100{padding-top:100px;}
+
+.pb100{padding-bottom:100px;}
+
+.pt50{padding-top:50px;}
+
+.pb50{padding-bottom:50px;}
+
+.pl30{padding-left:30px;}
+
+.section-light{background:#fff;}
+
+/** ----------------------------- Preloader Styles Starts -------------------------- **/
+
+.preloader{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:#ffd6de;
+    z-index:999;
+}
+
+.magnifier{
+    top:50%; left: 50%;
+    width: 50px;
+    position:relative;
+    margin: auto;
+    animation:magnify 1s linear infinite alternate;
+}
+
+@keyframes magnify{
+    0%{-webkit-transform:scale(1)}
+    100%{-webkit-transform:scale(2)}
+}
+
+/** ------------------------------------- Preloader Styles Ends ------------------------------------- **/
+
+/** ------------------------------------- Navbar Styles Starts ------------------------------------- **/
+
+#header .navbar {
+    margin: 0px;
+    border: none;
+    border-radius: 0px;
+    background: #fff;
+    margin-top: 60px;
+    min-height: 58px;
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    -ms-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-in;
+}
+
+#header .navbar .navbar-brand {
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+    padding-left: 1rem;
+}
+
+#header .navbar .navbar-brand img {
+    height: 60px;
+    width: auto;
+}
+
+#header .navbar-nav li {
+    margin-right: 15px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    position: relative;
+}
+
+#header .navbar-nav li a {
+    text-transform: uppercase;
+    color: #333;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    position: relative; /* لجعل النص فوق الـ :after */
+    z-index: 2; /* النص يصبح فوق الخلفية */
+    pointer-events: auto;
+}
+
+#header .navbar-nav li a:hover, 
+#header .navbar-nav li.active a {
+    color: #fff;
+    background: none; 
+}
+
+#header .navbar-nav li:after {
+    -webkit-transition: all 0.4s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    -moz-transition: all 0.4s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    -o-transition: all 0.4s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    -ms-transition: all 0.4s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    transition: all 0.4s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    opacity: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #6575A6;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    z-index: 1; /* الـ :after يكون تحت النص */
+    pointer-events: none;
+}
+
+#header .navbar-nav li:hover:after, 
+#header .navbar-nav li.active:after {
+    opacity: 1;
+    bottom: 0px;
+}
+
+#header .navbar-nav li.hlighted {
+    border: 2px;
+    border-color: #6575A6;
+}
+
+#header .navbar-nav li.hlighted a {
+    color: #6575A6;
+}
+
+#header .navbar-nav li.hlighted a:hover {
+    background: #6575A6;
+    color: #fff;
+}
+
+#header .navbar-nav li.hlighted:after {
+    height: 0px;
+}
+
+/** ------------------------------------- Navbar Styles Ends ------------------------------------- **/
+
+/** ------------------------------------- Hero Styles Starts ------------------------------------- **/
+
+#hero-section{
+    position:relative;
+    overflow:hidden;
+}
+
+.cloud{
+      width: 15px;
+      height: 15px;
+      background: #f28177;
+      clip-path: polygon(
+        50% 0%,
+        61% 35%,
+        98% 35%,
+        68% 57%,
+        79% 91%,
+        50% 70%,
+        21% 91%,
+        32% 57%,
+        2% 35%,
+        39% 35%
+      );
+    position:absolute;
+    overflow:hidden;
+    opacity: .5;
+}
+
+.x1{
+    animation:moveclouds 30s linear infinite;
+    top:150px
+}
+
+.x2{
+    left:200px;
+    top:200px;
+    transform:scale(0.6);
+    animation:moveclouds 50s linear infinite;
+}
+
+.x3{
+    left:-250px;
+    top:250px;
+    transform:scale(0.8);
+    animation:moveclouds 40s linear infinite;
+}
+
+.x4{
+    left:470px;
+    top:300px;
+    transform:scale(0.75);
+    animation:moveclouds 36s linear infinite;
+}
+
+.x5{
+    left:-150px;
+    top:100px;
+    transform:scale(0.8);
+    animation:moveclouds 40s linear infinite;
+}
+
+@keyframes moveclouds{
+    0%{
+        margin-left:1000px;
+        transform: rotate(0deg);
+    }
+
+    100%{
+        margin-left:-1000px;
+        transform: rotate(180deg);
+    }
+}
+
+
+.intro-text h4{
+    margin-bottom:40px;
+    padding: 20px;
+}
+
+.intro-text a{
+    text-transform:uppercase;
+}
+
+/** ------------------------------------- Hero Styles Ends ------------------------------------- **/
+
+/** ------------------------------------- Project Section Styles Starts ------------------------------------- **/
+#projects{
+    scroll-margin-top: 100px;
+}
+
+.single-project-item{
+    display:block;
+    text-decoration:none;
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+    text-align:center;
+}
+
+.single-project-item:after{
+    background:#000;
+    content:"";
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0; bottom:-50%;
+    opacity:0;
+    -webkit-transition:all 0.4s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    -moz-transition:all 0.4s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    -o-transition:all 0.4s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    -ms-transition:all 0.4s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    transition:all 0.4s cubic-bezier(0.300,0.100,0.580,1.000);
+}
+
+.single-project-item:hover:after{
+    bottom:0px;
+    opacity:0.8;
+}
+
+.grid-caption{
+    position:absolute;
+    left:0; top:0;
+    width:100%;
+    height:100%;
+    z-index:9;
+    color:#fff;
+    padding-right:35px;
+    padding-left:35px;
+}
+
+.grid-caption h2{
+    font-size:16px;
+    line-height:22px;
+    text-transform:uppercase;
+    margin-top:-50px;
+    padding-top:50%;
+    transition:transform 0.35s;
+    transform:translate3d(0, -30px, 0);
+    opacity:0;
+}
+
+.grid-caption .photoshop::before {
+    position: relative;
+    margin: 0; padding: 0;
+    content: "";
+    display: inline-block;
+    width: 2.2rem; 
+    height: 2.2rem;
+    background-image: url('../images/photoshop-icon.png'); 
+    background-size: cover; 
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.single-project-item:hover h2, .single-project-item:hover p, .single-project-item:hover i{
+    opacity:1;
+    transform:translate3d(0, 0, 0);
+}
+
+.grid-caption p, .grid-caption i{
+    opacity:0;
+    padding:10px 15px;
+    transform:translate3d(0, -10px, 0);
+    transition:opacity 0.35s, transform 0.35s;
+    padding:10px 50px;
+}
+
+.grid-caption i{
+    padding-top:45%;
+    font-size:45px;
+}
+
+.grid-caption::before,.grid-caption::after{
+    content:"";
+    opacity:0;
+    position:absolute;
+    transition:opacity 0.35s, transform 0.35s;
+}
+
+.single-project-item:hover .grid-caption::before, .single-project-item:hover .grid-caption::after{
+    opacity:1;
+    transform:scale(1);
+}
+
+.single-project-item:hover .grid-caption::after, .single-project-item:hover h2, .single-project-item > a:hover p{
+    transition-delay:0.15s;
+}
+
+.popup-btn {
+    pointer-events: auto;
+    display: none; /* مخفي بشكل افتراضي */
+    position: fixed; /* الزر يبقى ثابتًا */
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 9999;
+    transition: all 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* ظل خفيف */
+}
+
+/* منع تأثير hover على العناصر الخلفية */
+.no-hover:hover {
+    pointer-events: auto;
+}
+
+/* تأثير عند تمرير المؤشر */
+.popup-btn:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* تغيير اللون عند التمرير */
+    transform: scale(1.1); /* تكبير الزر قليلاً */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* تعزيز الظل */
+    cursor: pointer; /* تغيير شكل المؤشر */
+}
+
+/* تأثير عند الضغط */
+.popup-btn:active {
+    transform: scale(0.95); /* تصغير الزر قليلاً */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); /* تقليل الظل */
+    background-color: rgba(0, 0, 0, 1); /* جعل اللون أغمق عند الضغط */
+}
+
+/** ------------------------------------- Project Section Styles Ends ------------------------------------- **/
+
+/** ------------------------------------- About Area Styles Starts ------------------------------------- **/
+
+#about-area h3{
+    font-size:22px;
+    color:#6575A6;
+    margin-bottom:25px;
+    margin-top:0px;
+}
+
+.social-icons{
+    margin-right:3px;
+    font-size: 1.5rem;
+}
+
+/** ------------------------------------- About Area Styles Ends ------------------------------------- **/
+
+/** ------------------------------------- Contact Form Styles Starts ------------------------------------- **/
+
+#contact-form-section {
+    scroll-margin-top: 80px; /* adjust based on the height of your header */
+  }
+
+#contact-form-section {
+    scroll-margin-top: 200px;
+    background: #fff;
+    padding: 50px 0;
+}
+
+#contact-form-section h3 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#contact-form-section p {
+    font-weight: 300;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+#contact-form-section form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#contact-form-section input,
+#contact-form-section textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    box-sizing: border-box;
+    margin-left: 0; margin-right: 0;
+}
+
+input .contact-name {
+    margin-left: 1%;
+}
+
+#contact-form-section input {
+    width: 49.5%;
+}
+
+#contact-form-section input:focus,
+#contact-form-section textarea:focus {
+    border-color: #6575A6;
+    outline: none;
+    box-shadow: 0 0 5px rgba(101, 117, 166, 0.5);
+}
+
+#contact-form-section textarea {
+    width: 100%;
+    height: 120px;
+    resize: none;
+}
+
+#contact-form-section .btn-fill {
+    display: block;
+    width: 30%;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #6575A6;
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form-section .btn-fill:hover {
+    background-color: #7285bc;
+    transform: scale(1.05); /* تكبير الزر قليلاً */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* زيادة الظل */
+}
+
+#contact-form-section .btn-fill:active {
+    transform: scale(0.98); /* تصغير بسيط عند الضغط */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); /* تقليل الظل عند الضغط */
+}
+
+#contact-form-section .error-message {
+    color: #FF5252;
+    background-color: #FFF4F4;
+    border: 1px solid #FF5252;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    display: none;
+}
+
+/** ------------------------------------- Contact Form Styles Ends ------------------------------------- **/
