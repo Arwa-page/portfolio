@@ -326,6 +326,19 @@ img{
     vertical-align: middle;
 }
 
+.grid-caption .illustrator::before {
+    position: relative;
+    margin: 0; padding: 0;
+    content: "";
+    display: inline-block;
+    width: 2.2rem; 
+    height: 2.2rem;
+    background-image: url('../images/illustrator-icon.png'); 
+    background-size: cover; 
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
 .single-project-item:hover h2, .single-project-item:hover p, .single-project-item:hover i{
     opacity:1;
     transform:translate3d(0, 0, 0);
@@ -396,22 +409,6 @@ img{
 }
 
 /** ------------------------------------- Project Section Styles Ends ------------------------------------- **/
-
-/** ------------------------------------- About Area Styles Starts ------------------------------------- **/
-
-#about-area h3{
-    font-size:22px;
-    color:#6575A6;
-    margin-bottom:25px;
-    margin-top:0px;
-}
-
-.social-icons{
-    margin-right:3px;
-    font-size: 1.5rem;
-}
-
-/** ------------------------------------- About Area Styles Ends ------------------------------------- **/
 
 /** ------------------------------------- Contact Form Styles Starts ------------------------------------- **/
 

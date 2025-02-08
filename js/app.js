@@ -145,14 +145,3 @@
         
     });
 })(jQuery);
-
-document.querySelectorAll('#header .navbar-nav li').forEach((li) => {
-    li.addEventListener('click', (event) => {
-        // ابحث عن الرابط داخل العنصر
-        const link = li.querySelector('a');
-        if (link) {
-            // انقل المستخدم إلى الرابط
-            window.location.href = link.href;
-        }
-    });
-});
